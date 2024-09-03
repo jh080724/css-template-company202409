@@ -172,6 +172,7 @@ section.main .main-title p{
   margin: 25px 0;
 }
 
+/* position: relative, absolute 확인 다시 하자.~~ 이해될때 까지 */
 section.main .main-title .view {
   font-size: 20px;
   letter-spacing: 2px;
@@ -199,7 +200,155 @@ section.main .main-title .view::after {
 }
 
 section.main .main-title .view:hover::after {
-
   width: 100%;
+}
 
+/* 각 섹션에 들어갈 디자인을 일괄 지정 */
+section .title{
+  text-align: center;
+}
+
+section .title h2{
+  font-size: 45px;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+section .title p{
+  font-size: 18px;
+  color: #555;
+}
+
+section .sub-container{
+  background: orange;
+  width: 74%;
+  margin: 0 auto;
+}
+
+/* ------------------------ Section About Style ----------------------------- */
+section.about {
+  /* background: tomato; */
+  margin: 80px 0;
+}
+
+section.about .sub-container{
+  margin-top: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 30px;
+
+}
+
+section.about .sub-container li{
+  float: left;
+  width: 33.333%;
+  box-sizing: border-box;
+  height: 510px;
+}
+
+section.about .sub-container li .img-box{
+  overflow: hidden;
+}
+
+section.about .sub-container li .img-box img{
+  width: 100%;
+  transition: 0.6s;
+}
+
+section.about .sub-container li a:hover .img-box img{
+  transform: scale(1.2);
+}
+
+section.about .sub-container li a .text{
+  padding: 25px;
+}
+
+section.about .sub-container li a .text h3{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+section.about .sub-container li a .text p{
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+section.about .sub-container li a .text p.more{
+  /* 일괄 대소문자 변경 <-> lowercase */
+  text-transform: upppercase;
+  font-weight: 700;
+
+  position: relative;  /*얘를 기준으로 absolute 하기 위해 잡아줌, 가상하고도 연관이 있나 ?*/
+  padding-left: 40px;
+}
+
+section.about .sub-container li a .text p.more::before {
+  content: '→';
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  line-height: 30px; /* 라인하이트를 텍스트와 같은 크기로 잡으면 정렬잉 ㅇ리ㅏㄴ어리머리;.ㅁ너이; */
+  background: #ff8342;
+
+  /* 위의 relative 와 연결되어 있음 */
+  position: absolute;  
+  top: -7px; 
+  left: 0; 
+}
+
+/* ------------------------ Section Innovation Style ----------------------------- */
+section.innoation{
+  margin-bottom: 150px;
+}
+
+section.innovation .img-box{
+  margin-top: 50px;
+  height: 540px;
+  background: url(./img/product_1.jpg) no-repeat center / cover;
+
+  position: relative;
+}
+
+section.innovation .img-box .inner {
+  background: #3a3c4e;
+  width: 80%;
+  color: #fff;
+
+  position: absolute;
+  top:75%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+section.innovation .img-box .inner h3{
+  background: #fff;
+  color: #222;
+
+  font-size: 18px;
+  padding: 25px 45px;
+}
+
+section.innovation .img-box .inner .bottom{
+  padding: 35px 85px;
+}
+
+section.innovation .img-box .inner .bottom p{
+  float: left;
+  width: 70%;
+  line-height: 1.6; /* 줄간격 */
+}
+
+section.innovation .img-box .inner .bottom a{
+  /* display: block; */
+  float: right; /* 인라인 요소(a span 등)에 float을 걸면 알아서 display:block 이 걸림 */
+
+  padding: 7px 30px;
+  border-radius: 50px;
+  background: #ff8342;
+  
+}
+
+section.innovation .img-box .inner .bottom a:hover{
+  background: #f86010;
+  
 }
