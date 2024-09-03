@@ -138,7 +138,7 @@ section .main-title {
   /* background: gray; */
   width: 80%;
   /* 아래는 box를 가운데로 배치하는 공식 같은 것임. */
-  position: absolute; /* 부모요소 중 position을 기준으로 움직인다.*/
+  position: absolute; /* 부모요소 position을 기준으로 움직인다.*/
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* 왼쪽으로 이동하라 */
@@ -220,7 +220,7 @@ section .title p{
 }
 
 section .sub-container{
-  background: orange;
+  /* background: orange; */
   width: 74%;
   margin: 0 auto;
 }
@@ -297,7 +297,7 @@ section.about .sub-container li a .text p.more::before {
 }
 
 /* ------------------------ Section Innovation Style ----------------------------- */
-section.innoation{
+section.innovation{
   margin-bottom: 150px;
 }
 
@@ -350,5 +350,190 @@ section.innovation .img-box .inner .bottom a{
 
 section.innovation .img-box .inner .bottom a:hover{
   background: #f86010;
-  
+
+}
+
+/* ------------------------ Section  me Style ----------------------------- */
+section.me{
+  background: url(./img/me.jpg) no-repeat center / cover;
+  padding: 80px 0;
+  margin-bottom: 150px;
+}
+
+section.me ul.list {
+  margin-top: 50px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+
+}
+
+section.me ul.list > li{  /* 자식선택자 ">'' */
+  padding: 30px 60px;
+}
+
+section.me ul.list > li:first-child {
+  border-block-start: 1px solid #ddd;
+}
+
+section.me ul.list > li h3{
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+section.me ul.list > li h3 span{
+  position: absolute;
+  left: -30px;
+  color:#ff8342;
+}
+
+section.me ul.list > li p{
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+section.me ul.list > li .more{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+section.me ul.list > li .more span{
+  color: #ff8342;
+  font-size: 14px;
+  margin-left: 3px;
+}
+
+section.me ul.list ul.in {
+  margin-bottom: 30px;
+}
+
+section.me ul.list ul.in li em{
+  font-weight: bold;
+  float: left;
+  width: 12%;
+}
+
+section.me ul.list ul.in li p{
+  float: left;
+  position: relative;
+}
+
+section.me ul.list ul.in li p::before{
+  content:'';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ff8342;
+  position: absolute;
+  left: -35px;
+  top:8px;
+}
+
+#incruit-btn {
+  display: block;
+  width: 280px;
+  background: #ff8342;
+  color: #fff;
+
+  margin: 20px auto 0;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 10px, 0;
+  cursor: pointer;
+
+}
+
+/* ------------------------ Section  SNS Style ----------------------------- */
+section.sns {
+margin-bottom: 60px;
+}
+
+section.sns ul{
+  margin: 50px auto;
+}
+
+section.sns ul li{
+  float: left;
+  width: 32%;
+  margin-right: 2%;
+}
+
+section.sns ul li:last-child{
+  margin-right: 0;
+}
+
+section.sns ul li .img-box{
+  max-height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+section.sns ul li .img-box img {
+  width: 100%;
+}
+
+section.sns ul li .img-box::before{
+  content:'';
+  width: 0;
+  height: 100%;
+  background: rgba(255,131,66,0.75);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+section.sns ul li a:hover .img-box::before {
+  width: 100%;
+}
+
+section.sns ul li .img-box::after{
+  content:"BLOG";
+  font-size: 15px;
+  font-family: "EXO 2", sans-serif;
+  border: 1px solid #fff;
+  border-radius: 40px;
+  color: #fff;
+  padding: 5px 30px;
+
+    /* 아래는 box를 가운데로 배치하는 공식 같은 것임. */
+    position: absolute; /* 부모요소 position을 기준으로 움직인다.*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 왼쪽으로 이동하라 */
+    /* ---------------------------------------------------*/
+    opacity: 0;
+    transition: 0.5s;
+}
+
+section.sns ul li a:hover .img-box::after{
+  opacity: 1;
+}
+
+section.sns ul li .bottom{
+  padding: 20px 0 20px 30px; /* 상 우 하 좌 */
+  box-sizing: border-box;
+}
+
+section.sns ul li .bottom p{
+  font-size: 18px;
+}
+
+section.sns ul li .bottom p.color{
+  font-size: 15px;
+  color: #999;
+  margin-bottom: 10px;
+}
+section.sns ul li .bottom p.time{
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 30px;
+}
+
+section.sns ul li .bottom p.time span{
+  margin-left: 5px;
+  font-size: 0.9em;
+  color: #999;
+  margin-bottom: 30px;
 }
