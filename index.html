@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./main.css" />
+
+    <!-- font awesome download js code -->
+    <script
+      src="https://kit.fontawesome.com/861e945404.js"
+      crossorigin="anonymous"
+    ></script>
+
   </head>
   <body>
     <!-- 전체를 감싸는 Box  -->
@@ -12,7 +19,8 @@
       <!-- header : semantic tag -->
       <header>
         <!-- 로고(h1) | 메인메뉴(nav) | 기타 메뉴(nav) -->
-        <div class="inner-header">
+        <div class="inner-header clearfix">
+          <!-- 부모가 자식의 높이를 인식하도록 clearfix 지정-->
 
           <!-- logo: 로고 이미지 영역 -->
           <h1 class="logo">
@@ -30,13 +38,13 @@
               <li><a href="#">인재채용</a></li>
             </ul>
           </nav>
-          
+
           <!-- tnb: top navigation bar 영역 -->
           <nav class="tnb">
             <ul>
-              <li><a href="#">알기쉬운 제품공정</a></li>
-              <li><a href="#">내 삶속의 회의</a></li>
-              <li><a href="#">제품검색</a></li>
+              <li><a href="#"><i class="fa-solid fa-flask"></i>알기쉬운 제품공정</a></li>
+              <li><a href="#"><i class="fa-regular fa-handshake"></i>내 삶속의 회의</a></li>
+              <li><a href="#">제품검색<i class="fa-solid fa-magnifying-glass"></i></a></li>
             </ul>
           </nav>
         </div>

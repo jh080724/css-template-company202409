@@ -19,6 +19,7 @@ button, input {
     display: block;
     clear: both;
 }
+
 body {
     font-size: 14px;
     font-family: 'Noto Sans KR', sans-serif;
@@ -41,19 +42,86 @@ header {
 }
 
 header .inner-header {
+  /* background: orange; */
   width: 84%;
   margin: 0 auto;
 }
 
 header .inner-header .logo {
+  /* background: skyblue; */
   float: left;
   width: 200px;
 }
 
+header .inner-header .logo img{
+  width: 100%;
+  vertical-align: middle;
+
+  border: 1px solid black;
+  border-radius: 15px;
+  opacity: 0.9;
+}
+
+/* 모든 nav에 대한 li 가로 배치, clearfix는 그 위 부모에 지정되어 있어 안해줘도됨. */
+header .inner-header nav li{
+  float:left;
+}
+
+header .inner-header nav li a{
+  font-size: 16px;
+  color: #fff;
+
+}
+
 header .inner-header .gnb {
+  /* background: violet; */
   float: left;
+  margin-left: 80px;
+}
+
+header .inner-header .gnb li {
+  margin-right: 80px;
+}
+
+header .inner-header .gnb li a{
+  /*-- a를 블럭으로 출력 가로 세로 크기 지정 가능) --*/
+  display: block; 
+}
+
+header .inner-header .gnb li a:hover{
+  color: #ff8342;
 }
 
 header .inner-header .tnb {
+  /* background: yellowgreen; */
   float: right;
+}
+
+header .inner-header .tnb li{
+  margin-right: 25px;
+}
+
+/* 플라스크, 악수, 적용할 li 챠일드 2개 지정*/
+header .inner-header .tnb li:first-child i,
+header .inner-header .tnb li:nth-child(2) i{
+  margin-right: 8px;
+  font-size: 20px;
+  
+}
+
+/* 돋보기 */
+header .inner-header .tnb li:last-child i{
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+header .inner-header .tnb li:last-child a{
+  border: 1px solid #fff;
+  border-radius: 30px;
+  padding: 5px 15px; /*상하 5 좌우 5*/
+}
+
+header .inner-header .tnb li:last-child a:hover{
+  background: #fff;
+  color: blue;
 }
