@@ -30,6 +30,7 @@ body {
 }
 
 /* header style */
+/* ------------------------ Section Main Style ----------------------------- */
 header {
   background: rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -124,4 +125,81 @@ header .inner-header .tnb li:last-child a{
 header .inner-header .tnb li:last-child a:hover{
   background: #fff;
   color: blue;
+}
+
+/* ------------------------ Section Main Style ----------------------------- */
+
+section.main {
+  background: url(./img/vis_4.jpg) no-repeat center / cover fixed;
+  height: 100vh;
+}
+
+section .main-title {
+  /* background: gray; */
+  width: 80%;
+  /* 아래는 box를 가운데로 배치하는 공식 같은 것임. */
+  position: absolute; /* 부모요소 중 position을 기준으로 움직인다.*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 왼쪽으로 이동하라 */
+  /* ---------------------------------------------------*/
+
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 10px #123;
+
+  animation: uprise 1s;
+}
+
+@keyframes uprise {
+  from{
+    opacity: 0;
+    top: 60%;
+  }
+
+  to{
+    opacity: 1;
+    top: 50%;
+  }
+}
+
+section.main .main-title h2{
+  font-size: 55px;
+}
+
+section.main .main-title p{
+  font-size: 25px;
+  margin: 25px 0;
+}
+
+section.main .main-title .view {
+  font-size: 20px;
+  letter-spacing: 2px;
+  display: block;
+  width: 180px;
+  margin: 0 auto;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  padding: 8px 0;
+
+  position: relative;
+  overflow: hidden;
+}
+
+section.main .main-title .view::after {
+
+  content: '';
+  width: 0%;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+section.main .main-title .view:hover::after {
+
+  width: 100%;
+
 }
